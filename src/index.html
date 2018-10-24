@@ -25,7 +25,9 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
   Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega" role="navigation"></nav>
+<nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega" role="navigation">
+  Header
+</nav>
 
 <div class="light">
   <div class="container-fluid">
@@ -78,122 +80,137 @@
         <ol class="breadcrumb">
           <li>SECTION 1</li>
         </ol>
-        <h1 class="">General Topic</h1>
-        <div class="horizontal-line"></div>
-        <h3 class="example-title grey-600">Readings:</h3>
+
+        <h1>General Topic</h1>
+        <div class="pull-right">
+          <button type="button" class="btn btn-round btn-outline btn-primary btn-sm margin-bottom-10"
+                  data-toggle="collapse"
+                  data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1">Show less
+            <i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
       </div>
     </div>
 
-    <div class="panel transparent">
-      <div class="panel-body">
-        <div class="row">
+    <div class="collapse in" id="collapse_1">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="horizontal-line"></div>
 
-          <!--Panel-->
-          <div class="col-md-6">
-            <div class="panel">
-              <div class="panel-heading">
-                <ul class="panel-actions">
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                  </a></li>
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                  </a></li>
-                </ul>
-                <h1 class="blue-800 widget-heading">Heading</h1>
-                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-              </div>
-              <div class="panel-body">
-                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                  velit in eiusmod laborum aliqua in.</p>
-              </div>
-            </div>
-          </div>
-          <!-- / Panel-->
-          <!--Panel-->
-          <div class="col-md-6">
-            <div class="panel">
-              <div class="panel-heading">
-                <ul class="panel-actions">
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                  </a></li>
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                  </a></li>
-                </ul>
-                <h1 class="blue-800 widget-heading">Heading</h1>
-                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-              </div>
-              <div class="panel-body">
-                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                  velit in eiusmod laborum aliqua in.</p>
-              </div>
-            </div>
-          </div>
-          <!-- / Panel-->
+          <h3 class="example-title grey-600">Readings:</h3>
         </div>
-        <div class="row">
-          <div class="col-md-12"></div>
-          <h3 class="example-title grey-600">Questions:</h3>
-        </div>
-        <div class="row">
-          <!--Panel-->
-          <div class="col-md-6">
-            <div class="panel">
-              <div class="panel-heading">
-                <ul class="panel-actions">
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                  </a></li>
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                  </a></li>
-                </ul>
-                <h1 class="blue-800 widget-heading">Heading</h1>
-                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
+      </div>
+
+      <div class="panel transparent">
+        <div class="panel-body">
+          <div class="row">
+
+            <!--Panel-->
+            <div class="col-md-6">
+              <div class="panel">
+                <div class="panel-heading">
+                  <ul class="panel-actions">
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                    </a></li>
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-pencil blue-600"></i>
+                    </a></li>
+                  </ul>
+                  <h1 class="blue-800 widget-heading">Heading</h1>
+                  <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
                         white-color" aria-hidden="true"></i>
-              </div>
-              <div class="panel-body">
-                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                  velit in eiusmod laborum aliqua in.</p>
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                    consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                    culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                    velit in eiusmod laborum aliqua in.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- / Panel-->
-          <!--Panel-->
-          <div class="col-md-6">
-            <div class="panel">
-              <div class="panel-heading">
-                <ul class="panel-actions">
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-list-alt blue-600"></i>
-                  </a></li>
-                  <li><a href="#">
-                    <i class="glyphicon glyphicon-book blue-600"></i>
-                  </a></li>
-                </ul>
-                <h1 class="blue-800 widget-heading">Heading</h1>
-                <i class="margin-top-5 icon wb-clipboard bg-blue-600
+            <!-- / Panel-->
+            <!--Panel-->
+            <div class="col-md-6">
+              <div class="panel">
+                <div class="panel-heading">
+                  <ul class="panel-actions">
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                    </a></li>
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-pencil blue-600"></i>
+                    </a></li>
+                  </ul>
+                  <h1 class="blue-800 widget-heading">Heading</h1>
+                  <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
                         white-color" aria-hidden="true"></i>
-              </div>
-              <div class="panel-body">
-                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                  velit in eiusmod laborum aliqua in.</p>
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                    consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                    culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                    velit in eiusmod laborum aliqua in.</p>
+                </div>
               </div>
             </div>
+            <!-- / Panel-->
           </div>
-          <!-- / Panel-->
+          <div class="row">
+            <div class="col-md-12"></div>
+            <h3 class="example-title grey-600">Questions:</h3>
+          </div>
+          <div class="row">
+            <!--Panel-->
+            <div class="col-md-6">
+              <div class="panel">
+                <div class="panel-heading">
+                  <ul class="panel-actions">
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                    </a></li>
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-pencil blue-600"></i>
+                    </a></li>
+                  </ul>
+                  <h1 class="blue-800 widget-heading">Heading</h1>
+                  <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                    consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                    culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                    velit in eiusmod laborum aliqua in.</p>
+                </div>
+              </div>
+            </div>
+            <!-- / Panel-->
+            <!--Panel-->
+            <div class="col-md-6">
+              <div class="panel">
+                <div class="panel-heading">
+                  <ul class="panel-actions">
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-list-alt blue-600"></i>
+                    </a></li>
+                    <li><a href="#">
+                      <i class="glyphicon glyphicon-book blue-600"></i>
+                    </a></li>
+                  </ul>
+                  <h1 class="blue-800 widget-heading">Heading</h1>
+                  <i class="margin-top-5 icon wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                    consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                    culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                    velit in eiusmod laborum aliqua in.</p>
+                </div>
+              </div>
+            </div>
+            <!-- / Panel-->
+          </div>
         </div>
       </div>
     </div>
@@ -206,138 +223,139 @@
       <div class="widget widget-shadow padding-10">
         <div class="widget-content">
           <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <ol class="breadcrumb">
-                  <li>SECTION 1</li>
-                </ol>
-                <h1 class="">General Topic</h1>
-                <div class="page-content">
+
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li>SECTION 1</li>
+              </ol>
+
+              <h1>General Topic</h1>
+              <div class="pull-right">
+                <button type="button" class="btn btn-round btn-outline btn-primary btn-sm  margin-bottom-10"
+                        data-toggle="collapse"
+                        data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">Show less
+                  <i class="glyphicon glyphicon-arrow-down"></i></button>
+              </div>
+            </div>
+
+            <div class="collapse in" id="collapse_2">
+              <div class="row">
+                <div class="col-md-12">
                   <div class="horizontal-line"></div>
-                  <div class="panel-group" id="exampleAccordionDefault" aria-multiselectable="true" role="tablist">
-                    <div class="panel transparent">
-                      <div class="panel-heading" id="exampleHeadingDefaultOne" role="tab">
-                        <a class="btn btn-round btn-outline btn-default btn-sm blue-600 bg-white show-less" data-toggle="collapse" href="#exampleCollapseDefaultOne"
-                           data-parent="#exampleAccordionDefault" aria-expanded="true" aria-controls="exampleCollapseDefaultOne">
-                          Show less <i class="glyphicon glyphicon-arrow-down"></i>
-                        </a>
+
+                  <h3 class="example-title grey-600">Readings:</h3>
+                </div>
+              </div>
+
+              <div class="panel-body">
+                <div class="row">
+
+                  <!--Panel-->
+                  <div class="col-md-6">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <ul class="panel-actions">
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                          </a></li>
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-pencil blue-600"></i>
+                          </a></li>
+                        </ul>
+                        <h1 class="blue-800 widget-heading">Heading</h1>
+                        <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
                       </div>
-                      <div class="panel-collapse collapse in" id="exampleCollapseDefaultOne"
-                           aria-labelledby="exampleHeadingDefaultOne" role="tabpanel">
-                        <div class="panel-body">
-                          <h3 class="example-title grey-600">Readings:</h3>
-                          <!--Panel-->
-                          <div class="col-md-6">
-                            <div class="panel">
-                              <div class="panel-heading">
-                                <ul class="panel-actions">
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                                  </a></li>
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                                  </a></li>
-                                </ul>
-                                <h1 class="blue-800 widget-heading">Heading</h1>
-                                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-                              </div>
-                              <div class="panel-body">
-                                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                                  velit in eiusmod laborum aliqua in.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- / Panel-->
-
-                          <!--Panel-->
-                          <div class="col-md-6">
-                            <div class="panel">
-                              <div class="panel-heading">
-                                <ul class="panel-actions">
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                                  </a></li>
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                                  </a></li>
-                                </ul>
-                                <h1 class="blue-800 widget-heading">Heading</h1>
-                                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-                              </div>
-                              <div class="panel-body">
-                                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                                  velit in eiusmod laborum aliqua in.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- / Panel-->
-
-                          <h3 class="example-title grey-600">Questions:</h3>
-                          <!--Panel-->
-                          <div class="col-md-6">
-                            <div class="panel">
-                              <div class="panel-heading">
-                                <ul class="panel-actions">
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-duplicate blue-600"></i>
-                                  </a></li>
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-pencil blue-600"></i>
-                                  </a></li>
-                                </ul>
-                                <h1 class="blue-800 widget-heading">Heading</h1>
-                                <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-                              </div>
-                              <div class="panel-body">
-                                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                                  velit in eiusmod laborum aliqua in.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- / Panel-->
-
-                          <!--Panel-->
-                          <div class="col-md-6">
-                            <div class="panel">
-                              <div class="panel-heading">
-                                <ul class="panel-actions">
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-list-alt blue-600"></i>
-                                  </a></li>
-                                  <li><a href="#">
-                                    <i class="glyphicon glyphicon-book blue-600"></i>
-                                  </a></li>
-                                </ul>
-                                <h1 class="blue-800 widget-heading">Heading</h1>
-                                <i class="margin-top-5 icon wb-clipboard bg-blue-600
-                        white-color" aria-hidden="true"></i>
-                              </div>
-                              <div class="panel-body">
-                                <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
-                                  consectetur qui minim eu nulla deserunt aliquip et sed anim proident
-                                  culpa ad aliquip consequat minim reprehenderit proident cupidatat
-                                  velit in eiusmod laborum aliqua in.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- / Panel-->
-
-                        </div>
+                      <div class="panel-body">
+                        <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                          consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                          culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                          velit in eiusmod laborum aliqua in.</p>
                       </div>
                     </div>
                   </div>
-
-                  <a class="bold" href="#">Give me exercises and content in: </a>
-                  <code> &nbsp;  &nbsp;</code>
+                  <!-- / Panel-->
+                  <!--Panel-->
+                  <div class="col-md-6">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <ul class="panel-actions">
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                          </a></li>
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-pencil blue-600"></i>
+                          </a></li>
+                        </ul>
+                        <h1 class="blue-800 widget-heading">Heading</h1>
+                        <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
+                      </div>
+                      <div class="panel-body">
+                        <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                          consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                          culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                          velit in eiusmod laborum aliqua in.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Panel-->
+                </div>
+                <div class="row">
+                  <div class="col-md-12"></div>
+                  <h3 class="example-title grey-600">Questions:</h3>
+                </div>
+                <div class="row">
+                  <!--Panel-->
+                  <div class="col-md-6">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <ul class="panel-actions">
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-duplicate blue-600"></i>
+                          </a></li>
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-pencil blue-600"></i>
+                          </a></li>
+                        </ul>
+                        <h1 class="blue-800 widget-heading">Heading</h1>
+                        <i class="margin-top-5 glyphicon glyphicon-ok icon icon-circle wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
+                      </div>
+                      <div class="panel-body">
+                        <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                          consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                          culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                          velit in eiusmod laborum aliqua in.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Panel-->
+                  <!--Panel-->
+                  <div class="col-md-6">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <ul class="panel-actions">
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-list-alt blue-600"></i>
+                          </a></li>
+                          <li><a href="#">
+                            <i class="glyphicon glyphicon-book blue-600"></i>
+                          </a></li>
+                        </ul>
+                        <h1 class="blue-800 widget-heading">Heading</h1>
+                        <i class="margin-top-5 icon wb-clipboard bg-blue-600
+                        white-color" aria-hidden="true"></i>
+                      </div>
+                      <div class="panel-body">
+                        <p>Lorem ipsum Magna qui labore amet qui id consequat adipisicing irure
+                          consectetur qui minim eu nulla deserunt aliquip et sed anim proident
+                          culpa ad aliquip consequat minim reprehenderit proident cupidatat
+                          velit in eiusmod laborum aliqua in.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / Panel-->
                 </div>
               </div>
             </div>

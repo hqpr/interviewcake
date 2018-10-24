@@ -46,6 +46,12 @@
 .site-navbar.navbar-inverse .navbar-container {
   background-color: transparent;
 }
+
+.navbar-mega {
+  text-align: center;
+  color: white;
+  padding: 10px 30px;
+}
 html,
 body {
   height: 100%;
@@ -76,6 +82,11 @@ body {
           transform: translate3d(-240px, 0, 0);
 }
 
+
+footer {
+  text-align: center;
+  color: white;
+}
 hr {
   display: block;
   border-top: 3px solid #ececec;
@@ -104,6 +115,22 @@ hr {
 .show-less {
   width: 150px;
 }
+
+.light .panel{
+  background-color: #f7f7f7;
+}
+
+/*.light .panel-heading {*/
+  /*background-color: #f7f7f7;*/
+/*}*/
+
+/*.light .panel-actions{*/
+  /*background-color: #f7f7f7;*/
+/*}*/
+
+/*.light .panel-body {*/
+  /*background-color: #f7f7f7;*/
+/*}*/
 
 .site-menubar-header {
   height: 140px;
@@ -1030,7 +1057,7 @@ body {
   }
 }
 .site-footer {
-  height: 44px;
+  height: 100px;
   padding: 10px 30px;
   background-color: #4fc0e2;
   border-top: 1px solid #e4eaec;
@@ -1045,9 +1072,7 @@ body {
 .site-footer:after {
   clear: both;
 }
-.site-footer-legal {
-  float: left;
-}
+.site-footer-legal {}
 .site-footer-actions {
   float: right;
 }
@@ -5741,7 +5766,6 @@ a:focus {
 }
 .widget {
   position: relative;
-  margin-bottom: 30px;
   background-color: #fff;
 }
 .widget .cover {

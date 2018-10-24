@@ -98,6 +98,15 @@ hr {
 .bold {
   font-weight: bold;
 }
+textarea, select, input, button { outline: none; }
+.text input {
+  display: inline-block;
+  margin-left: 10px;
+  width: 40px;
+  height: 30px;
+  border: 1px solid #e2e5e7;
+  background: #f2f2f2;
+}
 
 .white-color {
   color: white;
@@ -6027,10 +6036,6 @@ div.widget-title {
   border-top-color: transparent;
 }
 
-.panel{
-  border: 0;
-  box-shadow: none;
-}
 
 .panel-group .panel + .panel {
   margin-top: 10px;
@@ -9356,6 +9361,16 @@ h4.example-title {
 .panel-body > .row:last-child > [class*="col-"]:last-child .example-wrap:last-child {
   margin-bottom: 0;
 }
+
+.panel-body {
+  padding-left: 35px;
+  padding-right: 15px;
+}
+
+.panel-body p {
+  margin-top: -20px;
+}
+
 .example-well {
   position: relative;
   margin-bottom: 30px;

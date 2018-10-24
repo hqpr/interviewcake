@@ -98,8 +98,11 @@ hr {
 
 .horizontal-line {
   width: 100%;
-  border-top: 1px solid #bdbdbd;
-  margin-top: 40px;
+  border-top: 1px solid #e4eaec;
+}
+
+.show-less {
+  width: 150px;
 }
 
 .site-menubar-header {
@@ -1029,7 +1032,7 @@ body {
 .site-footer {
   height: 44px;
   padding: 10px 30px;
-  background-color: #fff;
+  background-color: #4fc0e2;
   border-top: 1px solid #e4eaec;
   -webkit-box-shadow: inset 0 0 44px rgba(0, 0, 0, .02);
           box-shadow: inset 0 0 44px rgba(0, 0, 0, .02);
@@ -5999,6 +6002,12 @@ div.widget-title {
 .panel-group .panel-heading + .panel-collapse .panel-body {
   border-top-color: transparent;
 }
+
+.panel{
+  border: 0;
+  box-shadow: none;
+}
+
 .panel-group .panel + .panel {
   margin-top: 10px;
 }
@@ -6010,10 +6019,6 @@ div.widget-title {
 }
 .panel-group-continuous .panel:last-child {
   border-radius: 0 0 4px 4px;
-}
-.panel-group-continuous .panel + .panel {
-  margin-top: 0;
-  border-top: 1px solid #e4eaec;
 }
 .panel-group-simple .panel {
   background: transparent;

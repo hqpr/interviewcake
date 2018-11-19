@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="light text">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="" class="widget widget-shadow">
+          <div class="widget widget-content">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+
+                  <div class="page-header">
+                    <ol class="breadcrumb">
+                      <li><a href=""><i class="glyphicon glyphicon-arrow-left"></i></a>
+                        Jump to where you left off: <a href="#">Heading goes here</a></li>
+                    </ol>
+                    <h1 class="page-title">The Interview Cake Course</h1>
+                  </div>
+                  <div class="page-content">
+                    <hr>
+                    <p>
+                      It is a long established fact that a reader will be distracted by the readable content of a page
+                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                      distribution of letters, as opposed to using ‘Content here, content here’, making it look like
+                      readable English.
+                    </p>
+                    <p>
+                      Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+                      text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various
+                      versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour
+                      and the like).
+                    </p>
+
+                    <a class="bold" href="" onclick="return false">Give me exercises and content in: </a>
+                    <input type="text" class="form-control ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div ng-controller="appCtrl">
+  {% for section in sections %}
+    <section class="{% cycle 'dark' 'light' %}">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="widget widget-shadow">
+            <div class="widget-content">
+              <div class="container">
+
+                <div class="col-md-12">
+                  <ol class="breadcrumb">
+                    <li>SECTION {{ section.id }}</li>
+                  </ol>
+                  <div class="col-md-6"><h1>{{ section.topic_title }}</h1></div>
+                  <div class="col-md-6 margin-top-20">
+                    <div class="pull-right">
+                      <button type="button" class="btn btn-round btn-outline btn-primary btn-sm"
+                              data-toggle="collapse"
+                              data-target="#collapse_{{ section.id }}" aria-expanded="false"
+                              aria-controls="collapse_{{ section.id }}">
+                        <i class="glyphicon glyphicon-arrow-up"></i>
+                        Show less
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collapse in" id="collapse_{{ section.id }}">
+                  <div class="row margin-left-3"></div>
+                  <div class="panel-body">
+
+                    {% if section.reading_set.all %}
+                      <div class="row margin-left-3">
+                        <div class="col-md-12"></div>
+                        <h3 class="example-title grey-400">Readings:</h3>
+                      </div>
+
+                      <div class="row">
+                        {% for reading in section.reading_set.all|slice:"2" %}
+                          <div class="col-md-6">
+                            <div class="panel">
+                              <div class="panel-heading">
+                                <ul class="panel-actions">
+                                  <li><a href="#">
+                                    <i class="glyphicon glyphicon-{{ reading.get_duplicate_icon }} blue-600"></i>
+                                  </a></li>
+                                  <li><a href="#">
+                                    <i class="glyphicon glyphicon-{{ reading.get_edit_icon }} blue-600"></i>
+                                  </a></li>
+                                </ul>
+                                <h3 class="blue-800 widget-heading">{{ reading.heading }}</h3>
+
+                                <i ng-click="update_reading('{{ reading.id }}', $event)"
+                                   class="{{ reading.get_mark }}" aria-hidden="true"></i>
+                              </div>
+                              <div class="panel-body">
+                                <p>{{ reading.get_body }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                    {% if section.question_set.all %}
+                      <div class="row margin-left-3">
+                        <div class="col-md-12"></div>
+                        <h3 class="example-title grey-400">Questions:</h3>
+                      </div>
+                      <div class="row">
+                        {% for question in section.question_set.all|slice:"2" %}
+                          <div class="col-md-6">
+                            <div class="panel">
+                              <div class="panel-heading">
+                                <ul class="panel-actions">
+                                  <li><a href="#">
+                                    <i class="glyphicon glyphicon-{{ question.get_duplicate_icon }} blue-600"></i>
+                                  </a></li>
+                                  <li><a href="#">
+                                    <i class="glyphicon glyphicon-{{ question.get_edit_icon }} blue-600"></i>
+                                  </a></li>
+                                </ul>
+                                <h3 class="blue-800 widget-heading">{{ question.heading }}</h3>
+                                <i ng-click="update_question('{{ question.id }}', $event)"
+                                   class="{{ question.get_mark }}" aria-hidden="true"></i>
+                              </div>
+                              <div class="panel-body">
+                                <p>{{ question.get_body }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+</div>
+
+{% endblock content %}

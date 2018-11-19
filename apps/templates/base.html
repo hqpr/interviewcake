@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html class="no-js css-menubar" lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <title>The Interview Cake Course</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-extend.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+</head>
+
+<body class="dashboard">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega" role="navigation">
+  Header
+</nav>
+
+{% block content %}{% endblock content %}
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer-legal">Footer</div>
+</footer>
+<!-- Core  -->
+<script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-resource.js"></script>
+{#<script src="{% static 'js/app.module.js' %}"></script>#}
+<script src="{% static 'js/app.js' %}"></script>
+
+<script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/vendor/bootstrap/bootstrap.js' %}"></script>
+<!-- Plugins -->
+<script src="{% static 'js/plugins.js' %}"></script>
+
+
+</body>
+</html>

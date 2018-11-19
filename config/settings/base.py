@@ -257,6 +257,8 @@ CORS_ALLOW_HEADERS = (
     'X-CSRFToken'
 )
 
+CORS_ORIGIN_WHITELIST = ('interviewcake-alex.herokuapp.com', )
+
 try:
     from .local_settings import *
 except ImportError:

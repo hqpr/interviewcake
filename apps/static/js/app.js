@@ -5,7 +5,7 @@ var myApp = angular.module('myApp', []).config(function($httpProvider) {
 
 myApp.controller('appCtrl', function($scope, $http) {
 
-    $http.get('/api/v1/courses/').
+    $http.get('/api/v1/courses/readings/').
     then(function(response) {
         $scope.data = response.data;
     });

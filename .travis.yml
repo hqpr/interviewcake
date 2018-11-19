@@ -1,33 +1,11 @@
-# For more information about the configurations used
-# in this file, please see the Travis CI documentation:
-# https://docs.travis-ci.com
-
-after_success:
-  - |
-
-      # Automatically update the content from the `dist/` directory
-
-      $(npm bin)/travis-after-all \
-        && $(npm bin)/set-up-ssh -k "$encrypted_7289798db853_key" \
-                                 -iv "$encrypted_7289798db853_iv" \
-                                 --path-encrypted-key ".travis/github_deploy_key.enc" \
-        && $(npm bin)/commit-changes --branch "master" \
-                                     --commands "npm run build" \
-                                     --commit-message "Update content from the \`dist\` directory [skip ci]"
-
-env:
-  global:
-    - secure: "uZ0R71TG9AR+kbfM9rwa8PPNr3f9E0C4OuA0s6g0Gq15bBcpVxPvus0/eJdW+O2NSzZE1GbzS//hBiP+chK/8X4DyNIRutlGk5RYdnTTFEaZo9jp0BvlvprUYlGgpprR/531zQ9ahkc0STwVvzurGzlcF4NNMiISAJJ1IdQZABc="
-
-git:
-  depth: 10
-
-language: node_js
-
-node_js:
-  - 6
-  - 8
-  - 9
-
-dist: trusty
-sudo: false
+sudo: true
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq build-essential gettext python-dev zlib1g-dev libpq-dev xvfb
+  - sudo apt-get install -qq libtiff4-dev libjpeg8-dev libfreetype6-dev liblcms1-dev libwebp-dev
+  - sudo apt-get install -qq graphviz-dev python-setuptools python3-dev python-virtualenv python-pip
+  - sudo apt-get install -qq firefox automake libtool libreadline6 libreadline6-dev libreadline-dev
+  - sudo apt-get install -qq libsqlite3-dev libxml2 libxml2-dev libssl-dev libbz2-dev wget curl llvm
+language: python
+python:
+  - "3.5"

@@ -3,19 +3,26 @@ var myApp = angular.module('myApp', []).config(function($httpProvider) {
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
 });
 
+myApp.config(function($httpProvider) {
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+});
+
 myApp.controller('appCtrl', function($scope, $http) {
 
     myApp.config(['$qProvider', function ($qProvider) {
         $qProvider.errorOnUnhandledRejections(false);
     }]);
 
+    myApp.config(function($httpProvider) {
+        $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+        $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+    });
+
     $http.get('/api/v1/courses/readings/').
     then(function(response) {
         $scope.data = response.data;
     });
-
-    $http.defaults.xsrfCookieName = 'csrftoken';
-    $http.defaults.xsrfHeaderName = 'X-CSRFToken';
 
     $scope.update_reading = (function (id, $event) {
         var element = $event.currentTarget;

@@ -5,6 +5,10 @@ var myApp = angular.module('myApp', []).config(function($httpProvider) {
 
 myApp.controller('appCtrl', function($scope, $http) {
 
+    myApp.config(['$qProvider', function ($qProvider) {
+        $qProvider.errorOnUnhandledRejections(false);
+    }]);
+
     $http.get('/api/v1/courses/readings/').
     then(function(response) {
         $scope.data = response.data;

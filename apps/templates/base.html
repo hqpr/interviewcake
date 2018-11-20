@@ -43,7 +43,11 @@
 <!-- Plugins -->
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/plugins.js' %}"></script>
-
+{% csrf_token %}
+<script type="text/javascript">
+// using jQuery
+var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+</script>
 
 </body>
 </html>

@@ -14,6 +14,9 @@ myApp.controller('appCtrl', function($scope, $http) {
         $scope.data = response.data;
     });
 
+    $http.defaults.xsrfCookieName = 'csrftoken';
+    $http.defaults.xsrfHeaderName = 'X-CSRFToken';
+
     $scope.update_reading = (function (id, $event) {
         var element = $event.currentTarget;
         $http.put('/api/v1/courses/r/'+id+'/', {}).then(function(response) {

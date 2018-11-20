@@ -1,23 +1,16 @@
-var myApp = angular.module('myApp', []).config(function($httpProvider) {
+var myApp = angular.module('myApp', []).config(function($interpolateProvider, $httpProvider) {
+    $interpolateProvider.startSymbol('{$');
+    $interpolateProvider.endSymbol('$}');
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 });
 
-myApp.config(function($httpProvider) {
-    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-});
+myApp.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
 
 myApp.controller('appCtrl', function($scope, $http) {
-
-    myApp.config(['$qProvider', function ($qProvider) {
-        $qProvider.errorOnUnhandledRejections(false);
-    }]);
-
-    myApp.config(function($httpProvider) {
-        $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-        $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-    });
 
     $http.get('/api/v1/courses/readings/').
     then(function(response) {
@@ -33,7 +26,7 @@ myApp.controller('appCtrl', function($scope, $http) {
                 element.classList.add('bg-green-600');
             } else
                 element.classList.remove('bg-green-600');
-                element.classList.add('bg-blue-600');
+            element.classList.add('bg-blue-600');
         });
     });
     $scope.update_question = (function (id, $event) {
@@ -45,7 +38,7 @@ myApp.controller('appCtrl', function($scope, $http) {
                 element.classList.add('bg-green-600');
             } else
                 element.classList.remove('bg-green-600');
-                element.classList.add('bg-blue-600');
+            element.classList.add('bg-blue-600');
         });
     });
 
